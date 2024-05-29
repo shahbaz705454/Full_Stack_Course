@@ -1,0 +1,27 @@
+.box{
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    background-color:orange;
+    
+    padding:10px;
+    box-sizing: border-box;
+}
+#A{
+    background-color: orange;
+}
+#B{
+    background-color: white;
+   
+    
+    
+}   
+
+#C{
+    background-color: green;
+}
+
+
+
+    
+    

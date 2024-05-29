@@ -13,9 +13,23 @@ table,td,tr{
 }
 
 .heading{
+    font-size: large;
     text-align: center;
     background-color:cadetblue;
     
   
 
+}
+
+button:hover{
+    color: red;
+    background-color: bisque;
+}
+.google:hover{
+    color: red;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    
 }
