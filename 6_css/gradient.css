@@ -1,0 +1,10 @@
+.box{
+    border: 1px solid black;
+    height: 200px;
+    width: 150px;
+    background-image: linear-gradient(rgb(0, 183, 255),green);
+    background-image: linear-gradient(to right,red,green);
+    background-image: linear-gradient(to top,red,green);
+    background-image: linear-gradient(to bottom right,rgb(0, 255, 251),green);
+    background-image: linear-gradient(to bottom left,red,green);
+}

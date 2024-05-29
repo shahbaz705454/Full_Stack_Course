@@ -21,7 +21,24 @@
     background-color: green;
 }
 
+.newbox{
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  margin: 10px;
+  font-size: 16px;
 
+}
+
+.newbox2{
+    border: 1px solid black;
+    font-size: 2em;   /*Means [ em ] is multiple of 2 from its paresnt font size */
+    /* [ rem ] depend on root element means html root element  */
+
+
+
+}
 
     
     
