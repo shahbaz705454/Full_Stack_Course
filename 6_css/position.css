@@ -1,0 +1,37 @@
+.box{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+div{
+    display: inline-block;
+    background-color: rgb(163, 98, 224);
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+}
+/* #box3{
+    position: relative;
+    top: 100px;
+   left: 50px;
+   
+} */
+#box1{
+    position: fixed;
+}
+.wrapper{
+    background-color: aquamarine;
+    height: 1000px;
+    width: 1000px;
+}
+#box3{
+    position: absolute;
+    top: 100px;
+   left: 50px;
+   
+}
+#box4{
+    position: sticky;
+    top: 0px;
+}
