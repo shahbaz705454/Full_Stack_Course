@@ -8,3 +8,20 @@
     transform: skew(40deg);
     /* transform: matrix(1,2,3,4,4,5); */
 }
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+.translated{
+    transform: perspective(10px) translatez(-10px);
+}
+.scaled{
+    margin-left: 200px;
+    /* transform:perspective(350px) scaleZ(6) rotatey(45deg) rotatez(30deg); */
+transform: perspective(200px) scale(1) rotateX(40deg) rotateZ(40deg) rotateY(50deg);
+}
+
+
