@@ -18,7 +18,7 @@ div{
    
 } */
 #box1{
-    position: fixed;
+    position: relative;
 }
 .wrapper{
     background-color: aquamarine;
@@ -26,12 +26,15 @@ div{
     width: 1000px;
 }
 #box3{
-    position: absolute;
-    top: 100px;
-   left: 50px;
+    position: relative;
+    /* top: 100px;
+   left: 50px; */
    
 }
 #box4{
-    position: sticky;
-    top: 0px;
+    position: relative;
+    
+}
+#box2{
+    position: relative;
 }
