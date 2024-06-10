@@ -1,0 +1,36 @@
+.container{
+
+    background-color: rgb(233, 239, 130);
+    border: 1px slid black;
+    height: 700px;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 20px 400px 20px;
+    display: grid;
+    grid-template-areas: 
+    "hd hd"
+    "sb con"
+    "ft ft";
+    justify-content: center;
+
+}
+.box{
+
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+}
+#header{
+    
+    grid-area: hd;
+}
+#sidebar{
+    grid-area: sb;  
+}
+
+#content{
+    grid-area: con;
+}
+
+#footer{
+    grid-area: ft;
+}
