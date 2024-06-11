@@ -1,0 +1,35 @@
+.container{
+
+    height: 500px;
+    width: 500px;
+    background-color: greenyellow;
+    border: 3px solid black;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.box{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: aqua;
+    height: 150px;
+    width: 150px;
+    /* margin: 20px; */
+    /* transition: 1s; */
+    /* transition-property: all; */
+    /* transition-property: background-color; */
+    /* transition-delay: 0.1s; */
+    text-align: center;
+    transition: all 1s ease-in;
+    
+    
+}
+
+.box:hover{
+    background-color: orange;
+    /* box-shadow: 10px 10px 7px rebeccapurple; */
+    /* scale: 3.3; */
+    transform: rotate(360deg);
+    transform: translateX(340px) rotate(360deg) scale(2);
+    
+}
