@@ -1,0 +1,48 @@
+.container{
+    background-color: bisque;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-rows: 30px 400px 30px;
+    grid-template-areas: 
+    "hd hd"
+    "sb con"
+    "ft ft";
+    grid-gap:2px;
+}
+.box{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: aqua;
+}
+
+#header{
+    grid-area: hd;
+}
+#sidebar{
+ grid-area: sb;
+}
+
+#content{
+    grid-area: con;
+}
+
+#footer{
+    grid-area: ft;
+}
+
+@media(max-width:400px){
+    .container{
+        grid-template-columns: 150px ;
+        grid-template-rows: 30px 300px 300px 30px;
+        grid-template-areas: 
+        "hd"
+        "sb"
+        "con"
+        "ft";
+        font-size: 10px;
+        gap: 1px;
+        text-align: center;
+        justify-content: center;
+    }
+
+}

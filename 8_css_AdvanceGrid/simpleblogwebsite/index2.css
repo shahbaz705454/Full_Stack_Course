@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    display: flex;
+    /* justify-content: c; */
+    justify-content: space-between;
+    padding: 20px;
+    h1{
+        text-decoration: underline;
+    }
+    
+}
+.container{
+    /* background-color: bisque; */
+    height: 100vh;
+   padding-left: 40px;
+   display: grid;
+   grid-template-columns: 1300px 200px;
+   justify-content: space-between;
+   a{
+    color: rgb(10, 90, 194);
+   }
+
+}
+#box1{
+    p{
+        padding: 10px;
+    }
+}
+#box2{
+    /* background-color: azure; */
+    display: inline-block;
+    padding: 10px;
+   
+}
+
+.about{
+    background-color: aliceblue;
+    padding: 10px;
+}
+.achieves{
+    margin-top: 30px;
+}
+
+.elsewhere{
+    margin-top: 30px;
+}
+
+#first{
+    border: 1px solid black;
+   
+}
