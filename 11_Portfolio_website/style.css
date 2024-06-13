@@ -520,6 +520,9 @@ animation-iteration-count: infinite;
     padding: 5rem;
     margin: 10rem auto;
     gap: 30px;
+    /* height: 100%; */
+    /* width: 100%; */
+    /* box-sizing: border-box; */
 }
 
 
@@ -544,7 +547,7 @@ animation-iteration-count: infinite;
     font-size: 15rem;
     font-weight: 500;
     color:rgb(231, 231, 231);
-    bottom: -40%;
+    bottom: -35%;
     right: -15%;
     user-select: none;
     position: absolute;
@@ -604,5 +607,131 @@ animation-iteration-count: infinite;
 }
 .skill-subheading p{
     margin: 15px 0;
+}
+
+
+.contactus-form-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(231,231,231);
+}
+
+
+.contactus-heading{
+
+    color: var(--bgOrange);
+    font-size: 5em;
+    padding-top: 2rem;
+    font-weight: 500;
+
+
+}
+
+.contactus-sub-heading{
+    font-size: 3rem;
+    color: #343d68aa;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.contactus-form-container{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    align-items: center;
+}
+
+/* .formfield-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    margin: 2rem,5rem;
+} */
+
+.formfield{
+    width: 70%;
+    height: 43px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #1f1f1f;
+    border: none;
+    margin: 17px;
+
+}
+
+.formfield-textarea{
+    height: auto;
+    padding-top: 1rem;
+}
+
+#submit-btn{
+    border: none;
+    font-size: 1rem;
+    margin: 1rem 0.5rem;
+    scale: 0.9;
+}
+
+.submit-icon{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+
+footer{
+    position: relative;
+    margin-top: -1px;
+    background-color: #343d68;
+    padding: 5rem;
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem;
+    align-items: center;
+}
+
+.footer-fade-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    font-size: 5rem;
+    user-select: none;
+
+}
+
+.link-wrapper{
+    display: flex;
+    gap: 1.2rem;
+}
+.link-wrapper div a{
+ color: white;
+ text-decoration: none;
+ transition: all 0.8s;
+}
+.link-wrapper div a:hover{
+    color: var(--bgOrange);
+
+}
+
+.icon-wrapper{
+    display: flex;
+    gap: 2rem;
+}
+
+.icon-wrapper i{
+    transition: all 0.5s; 
+   
+    
+
+}
+.icon-wrapper i:hover{
+    transform: scale(1.4) rotatez(360deg);
+    
+
 }
 
