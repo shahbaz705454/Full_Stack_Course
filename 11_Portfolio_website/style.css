@@ -5,7 +5,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     scroll-behavior: smooth;
     font-family: "Be Vietnam Pro", sans-serif;
 }
@@ -85,7 +85,7 @@ a{
     color: rgb(231,231,231);
     z-index: -0;
 
-    bottom: -12%;
+    bottom: -10%;
     left: 1%;
     font-weight: bold;
     transition: all 3s;
@@ -322,7 +322,8 @@ animation-iteration-count: infinite;
 
 .project-section{
     background-color: rgb(232,232,232);
-    margin: 4em;
+    margin-top: 3em;
+    /* width: 100%; */
 }
 
 .page-header{
@@ -366,5 +367,242 @@ animation-iteration-count: infinite;
     right: 0;
     bottom: 0;
     background-color: #1f1f1f9a;
+    z-index: 0;
     transform: scaleX(1);
 }
+.project-card::before{
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,#343d68, #343d68be, #343d687c);
+    transform: scaleX(0);
+     transform-origin: left;
+     transition: all 0.4s;
+     z-index: 1;
+
+
+}
+
+.project-card:hover::before{
+
+    transform: scaleX(1);
+}
+
+.project-number{
+    position: absolute;
+    color: white;
+    z-index: 9;
+    font-size: 200px;
+    font-weight: 600;
+    display: none;
+}
+.project-card:hover .project-number{
+    display: block;
+    /* transition: all 0.5s; */
+
+}
+
+.project-number-right{
+    right: -40px;
+    top: -45px;
+
+}
+
+.project-number-left{
+    left: -40px;
+    top: -45px;
+
+}
+
+.project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+    transition: all 0.5s;
+
+}
+
+.project-content-left{
+    left: 10%;
+
+}
+
+.project-content-right{
+    right: 10%;
+}
+
+.project-skills-container{
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-skill{
+    width: 40px;
+}
+
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.project-subHeading{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.btn-grp {
+    display: flex;
+    gap: 0.9rem;
+   
+    align-items: center;
+}
+
+.btn-project:hover{
+    border: none;
+}
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+}
+
+.icon:hover{
+    color: var(--bgOrange);
+    transition: all 0.4s;
+}
+
+.project-card:hover .project-content{
+
+    transform: scale(1.1);
+    /* transition: all 0.5s ease-in; */
+}
+
+
+#project1{
+    background-image: url(./images/projects/Project1.png);
+    
+
+}
+#project2{
+    margin-left: 120px;
+    background-image: url(./images/projects/Project2.png);
+
+}
+#project3{
+    background-image: url(./images/projects/Project3.png);
+
+}
+#project4{
+    margin-left: 120px;
+    background-image: url(./images/projects/Project4.png);
+
+}
+
+/* Skills css Start here */
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    position: relative;
+    padding: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+}
+
+
+.skill-container-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.skill-container-right{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill-fade-text{
+    font-size: 15rem;
+    font-weight: 500;
+    color:rgb(231, 231, 231);
+    bottom: -40%;
+    right: -15%;
+    user-select: none;
+    position: absolute;
+    /* overflow-y: hidden; */
+}
+
+.blob-style{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: blobAnimate 3s linear infinite;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+
+@keyframes blobAnimate{
+    0%{
+        
+
+    }
+    50%{
+        top: 54%;
+        left: 46%;
+
+    }
+    100%{
+
+    }
+}
+
+.skills-logo{
+    width: 90px;
+    transition: all 0.5s;
+}
+
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+
+.skill-heading{
+    color: var(--bgOrange);
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.caps{
+
+    font-size: 90px;
+}
+
+.skill-subheading{
+
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+}
+.skill-subheading p{
+    margin: 15px 0;
+}
+
