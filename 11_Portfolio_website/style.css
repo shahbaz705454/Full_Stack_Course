@@ -515,7 +515,7 @@ animation-iteration-count: infinite;
 .skills-container{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     position: relative;
     padding: 5rem;
     margin: 10rem auto;
@@ -732,6 +732,90 @@ footer{
 .icon-wrapper i:hover{
     transform: scale(1.4) rotatez(360deg);
     
+
+}
+@media screen and (max-width: 1200px) {
+    .nav-items{
+    justify-content: start;
+    }
+    .navbar{
+        display: flex;
+        justify-content: center;
+    }
+
+   
+
+   #project1{
+    right: 0;
+    margin: 0 auto;
+   }
+   #project2{
+    right: 0;
+    margin: 0 auto;
+   }
+   #project3{
+    right: 0;
+    margin: 0 auto;
+   }
+   #project4{
+    right: 0;
+    margin: 0 auto;
+   }
+
+   .skills-container{
+  max-width: 1000px;
+
+    display: flex;
+    position: relative;
+    /* flex-direction: column; */
+    /* margin-left: 10rem; */
+    justify-content: center;
+    flex-wrap: wrap;
+    /* height: 1000px; */
+    gap: 2rem;
+    /* text-align: center; */
+   }
+
+   .skill-container-left{
+    text-align: center;
+   }
+
+   .skill-fade-text{
+   top: 100%;
+    left: 30%;
+    font-size: 150px;
+   }
+   
+   .faded-text{
+    font-size: 5rem;
+
+   }
+
+   /* #contactme{
+    display: flex;
+    justify-content: center;
+    position: relative;
+   } */
+#contactme-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 15%;
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* position: absolute; */
+    justify-content: center;
+    
+    /* flex-direction: column; */
+    justify-content: center;
+    width: 50%;
+    
+}
+
+
 
 }
 
