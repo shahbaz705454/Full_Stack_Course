@@ -113,3 +113,69 @@ console.log(find);
 let finds = course.find(courses=> courses.name==='kasif');
 console.log(finds);
 
+
+// REMOVING ELEMENT IN ARRAY 
+
+// END
+console.log(arr1);
+arr1.pop();
+console.log(arr1);
+
+
+// BEGNING
+arr1.shift();
+console.log(arr1);
+
+// MIDDLE
+
+arr1.splice(4,1);
+console.log(arr1);
+
+
+// EMPTYNING AN ARRAY
+
+let arr2=[2,3,4,5,6];
+let arr3=arr2;
+
+
+// ----> Fist method but not working in if the array is copied earlier not dlt properly
+// arr2 =[]; 
+
+
+// second method
+// arr2.length =0;
+
+// Third meathod
+// arr2.splice(0,arr2.length);
+
+// fourth meathod using loop
+while (arr2.length>0) {
+    arr2.pop();
+    
+}
+
+
+console.log(arr2);
+console.log(arr3);
+
+
+
+// COMBINGN ARRAY AND SLICING ARRAY
+
+
+
+// COMBING USING concat();
+let first = [1,2,3];
+let second = [4,5,6,7];
+
+let combined = first.concat(second);
+console.log(combined);
+
+
+// SLICING ARRAY USING slice();
+
+let sliced = combined.slice(1,4);     // (stating, ending)-> included (staring), excluded (ending)
+console.log(sliced);
+
+
+
