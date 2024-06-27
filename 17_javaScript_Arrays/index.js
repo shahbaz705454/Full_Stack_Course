@@ -1,3 +1,5 @@
+//-------------------------------------- MATH FUNCTION--------------------------------- 
+
 Math.random();
 console.log(Math.random())
 console.log(Math.round(1.8))
@@ -5,7 +7,7 @@ console.log(Math.round(1.4))
 console.log(Math.max(1, 4, 5, 6, 3, 4, 7, 9, 4, 6))
 
 
-// String
+//--------------------------------------- STRINGS--------------------------------
 
 let name = "Shahbaz";
 console.log(name.length);
@@ -40,7 +42,7 @@ let messages = ` hello my name is ${names},
 
 console.log(messages);
 
-// date
+//-----------------------------------------------DATE------------------------------------
 let date = new Date();
 console.log(date);
 
@@ -56,7 +58,7 @@ console.log(date4.getTime);
 
 
 
-// ARRAYS
+//------------------------------------ARRAYS-------------------------------------------
 
 
 let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -80,3 +82,34 @@ arr1.unshift(11);
 arr1.splice(5,0,'a');
 
 console.log(arr1);
+
+
+
+
+// searching
+
+console.log(arr1.includes(4));
+
+//------------------------- ARRAY OF OBJECTS---------------------------------------
+
+let course=[
+    {no:1 ,name:'shahbaz'},
+    {no:2 ,name:'aman'},
+    {no:3 ,name:'kasif'},
+
+]
+
+console.log(course);
+
+// searching in object of array
+
+let find = course.find(function(courses){
+    return courses.name =='shahbaz';
+});
+
+console.log(find);
+
+// ARROW FUNCTION 
+let finds = course.find(courses=> courses.name==='kasif');
+console.log(finds);
+
