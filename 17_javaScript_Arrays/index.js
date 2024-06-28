@@ -179,3 +179,17 @@ console.log(sliced);
 
 
 
+// SPREAD OPERATOR for Combining
+
+let combined2 = [...first,...second];
+console.log(combined2);
+
+
+// JOINING an Array Elements
+let joinNum=[10,20,30,40,50];
+let joined = joinNum.join();
+console.log(joined);
+
+
+
+
