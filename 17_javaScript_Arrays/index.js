@@ -192,4 +192,68 @@ console.log(joined);
 
 
 
+// -------------------------------------SHORTING IN ARRAY--------------------
 
+let shor = [2,8,4,5,9,1,3,6];
+shor.sort();
+console.log(shor);
+shor.reverse();
+console.log(shor);
+
+
+
+let obj2 =[
+    {no:2 , names:'shahbaz'},
+    {no:8 , names:'mohd'},
+    {no:4 , names:'ali'},
+    {no:5 , names:'ahmed'},
+    {no:9 , names:'ahmed'},
+    {no:1 , names:'ahmed'},
+    {no:3 , names:'khalid'},
+
+]
+
+
+console.log(obj2);
+
+// obj2.sort(nums=>no == 1);
+
+// console.log(obj2);
+
+
+
+
+
+
+
+// filter in ARRAY
+
+let newarr= [1,2,3,-5,-6,-4];
+
+let filtered = newarr.filter(value =>value>=0);
+console.log(filtered);
+
+
+
+
+// MApping in ARRAY
+
+let maps =[7,8,9,10];
+let mapped = maps.map(value=>'student_no '+value);
+console.log(mapped);
+
+
+
+// Mapping in object of array
+
+let obj = [7,8,9,10];
+let item = obj.map(function(num){
+    return {value : num};
+});
+console.log(item);
+
+
+
+
+
+ 
