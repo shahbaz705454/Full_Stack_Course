@@ -216,9 +216,9 @@ let obj2 =[
 
 console.log(obj2);
 
-// obj2.sort(nums=>no == 1);
+   let objsort = obj2.sort((a,b)=>a.no - b.no);
 
-// console.log(obj2);
+console.log(objsort);
 
 
 
