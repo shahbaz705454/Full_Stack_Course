@@ -82,7 +82,7 @@ arr1.unshift(11);
 arr1.splice(5,0,'a');
 
 console.log(arr1);
-
+ 
 
 
 
@@ -100,7 +100,7 @@ let course=[
     {no:3 ,name:'kasif'},
 
 ]
-
+ 
 console.log(course);
 
 // searching in object of array
@@ -191,6 +191,23 @@ console.log(combined2);
 let joinNum=[10,20,30,40,50];
 let joined = joinNum.join();
 console.log(joined);
+
+// -------------------------------------ITRATING IN ARRAY--------------------
+
+// for of 
+
+let newar =[1,2,3,4,5,6,7,8,9];
+for (let value of newar) {
+    console.log(value);
+
+
+    
+}
+
+// for each 
+
+newar.forEach(number=>console.log(number));
+
 
 
 
