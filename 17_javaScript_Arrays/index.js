@@ -90,6 +90,8 @@ console.log(arr1);
 
 console.log(arr1.includes(4));
 
+
+
 //------------------------- ARRAY OF OBJECTS---------------------------------------
 
 let course=[
