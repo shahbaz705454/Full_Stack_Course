@@ -30,3 +30,12 @@ content.addEventListener('click', function(event) {
     console.log(event);
     
 })
+
+// --------THE DEFAULT ACTION
+ let link= document.querySelector('#link');
+
+ link.addEventListener('click', function (event) {
+    
+    event.preventDefault();
+    console.log("maza aya");
+ })
