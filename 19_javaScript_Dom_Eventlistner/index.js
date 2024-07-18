@@ -88,7 +88,7 @@ content.addEventListener('click', function(event) {
 
 let element = document.querySelector('#element');
 
-element.addEventListener('click', function (event) {
+element.addEventListener("click", function (event) {
 
     // Adeed this if condition if we want to print only pan tag not para tag
     if(event.target.nodeName==='SPAN')
