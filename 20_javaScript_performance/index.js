@@ -48,7 +48,7 @@ document.body.appendChild(fragment); // REFLOW ,REPAINT
 
 
 
-// ------------------->  TIME OUT LOOP------------------
+// ------------------->  TIME OUT LOOPs------------------
 
 setTimeout(function timeout(){
     console.log("welcome back")
