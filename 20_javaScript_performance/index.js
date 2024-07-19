@@ -23,13 +23,13 @@
 
 let fragment = document.createDocumentFragment();
 
-for (let i = 0; i <= 30; i++) {
-    let element = document.createElement('p');
-    element.textContent= 'This is new paragraph ' + i;
+// for (let i = 0; i <= 30; i++) {
+//     let element = document.createElement('p');
+//     element.textContent= 'This is new paragraph ' + i;
 
-    fragment.appendChild(element);
+//     fragment.appendChild(element);
    
-}
+// }
 document.body.appendChild(fragment); // REFLOW ,REPAINT
 
 
@@ -50,8 +50,40 @@ document.body.appendChild(fragment); // REFLOW ,REPAINT
 
 // ------------------->  TIME OUT LOOPs------------------
 
-setTimeout(function timeout(){
-    console.log("welcome back")
-},5000);
+// setTimeout(function timeout(){
+//     console.log("welcome back")
+// },5000);
 
-setTimeout();
+// setTimeout();
+
+
+
+
+
+// --------------------> API ------------------.>
+// APi have two state resolve and reject
+
+// let merapromise = new Promise(function(resolve,reject){
+
+//     setTimeout(function() {
+//         console.log("I am inside promise 1 ")
+        
+//     }, 5000);
+//     resolve(2233);
+//     // reject(new Error('Bhaisabh Error aaye hai'))
+// });
+
+let merapromise2 = new Promise(function(resolve,reject){
+
+    setTimeout(function() {
+        console.log("I am inside promise 2 ")
+        
+    }, 3000);
+    resolve(2233);
+    // reject(new Error('Bhaisabh Error aaye hai'))
+});
+
+merapromise2.then((value) => {console.log(value)});
+merapromise2.catch((error) => {console.log(error)});
+
+console.log('Pehla');
