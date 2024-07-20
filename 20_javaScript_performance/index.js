@@ -102,7 +102,7 @@ let waada1 = new Promise (function(resolve,reject){
         console.log('Set timeout Started ');
     }, 2000);
     resolve(true)
-});
+}); 
 
 waada1.then(()=>{
     let waada2= new Promise(function(resolve,reject){
@@ -112,3 +112,5 @@ waada1.then(()=>{
 }).then((value)=>console.log(value));
 
 
+// ASYNC-AWAIT
+// Special syntex used to word with promises for multiple functions
