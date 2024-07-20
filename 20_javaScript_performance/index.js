@@ -173,7 +173,7 @@ async function helper() {
             title: 'shahbaz',
             body: 'acchi body',
             userId: 2003,
-            weight : 70,
+            weight: 70,
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -189,9 +189,22 @@ async function helper() {
 
 async function utility2() {
 
-    let ans =await helper();
+    let ans = await helper();
     console.log(ans);
 
 }
 
 utility2();
+
+
+
+// ------------------------->  CLOSURE  <--------------------------function init() {
+function init() {
+    var name = "Mozilla"; // name is a local variable created by init
+    function displayName() {
+        // displayName() is the inner function, that forms the closure
+        console.log(name); // use variable declared in the parent function
+    }
+    displayName();
+}
+init();
