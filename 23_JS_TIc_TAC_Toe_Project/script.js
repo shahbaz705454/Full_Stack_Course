@@ -29,9 +29,38 @@ function initGame(){
 }
 
 initGame();
+function swapTurn(){
+    if(currentPlayer=="X"){
+        currentPlayer ="O";
+
+    }else{
+        currentPlayer = "X";
+    }
+
+    // UI UPDATE
+    gameinfo.innerText = ` Current Player -${currentPlayer}`;
+}
 
 
-boxes.forEach((box,index)=>{
+function handleClick(index){
+    if(gameGrid===""){
+        boxes[index].innerText=currentPlayer;
+        gameGrid[index] = currentPlayer;  
+        boxes[index].style.pointerEvents = "none";
+        
+        // swap turn
+
+        swapTurn();
+
+        // check game over or win
+        checkGameOver();
+    }
+
+}
+
+
+
+boxes.forEach((box, index)=>{
     box.addEventListener("click",()=>{
         handleClick(index);
     })
