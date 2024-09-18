@@ -1,0 +1,10 @@
+.date{
+    text-align: center;
+    background-color: aquamarine;
+    height: 5rem;
+    display: block;
+  
+}
+.date span{
+    display: block;
+}
