@@ -20,6 +20,8 @@ let gameGrid;
 function initGame() {
   currentPlayer = "x";
   gameGrid = ["", "", "", "", "", "", "", "", ""];
+
+  
   boxes.forEach((box, index) => {
     box.innerText = "";
     box.style.pointerEvents = "all";
