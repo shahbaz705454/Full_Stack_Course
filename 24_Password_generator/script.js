@@ -49,3 +49,10 @@ function getRndInteger(min,max){
  function generateUpperCase(){
     return String.fromCharCode(getRndInteger(65,91));
  }
+
+ function generateSymbol(){
+    const RndNum = getRndInteger(0,symbols.length);
+    return symbols.charAt(RndNum);
+ }
+
+ 
