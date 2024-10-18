@@ -21,8 +21,8 @@
             <div class="display-container">
 
                 <input readonly placeholder="Password" class="display " data-passwordDisplay>
-                <button data-copy>
-                    <span data-copyMsg></span>
+                <button class="copybtn" data-copy>
+                    <span class="tooltip" data-copyMsg></span>
                     <img src="./asset/copy.svg" alt="copy" width="23" height="23">
 
 
@@ -49,22 +49,22 @@
 
                 <!-- CheckBox -->
 
-                <div>
+                <div class="check">
                     <input type="checkbox" id="uppercase">
                     <label for="uppercase">Include Uppercase letter</label>
 
                 </div>
-                <div>
+                <div class="check">
                     <input type="checkbox" id="lowercase">
                     <label for="lowercase">Include lowercase letter</label>
 
                 </div>
-                <div>
+                <div class="check">
                     <input type="checkbox" id="numbers">
                     <label for="numbers">Include Numbers</label>
 
                 </div>
-                <div>
+                <div class="check">
                     <input type="checkbox" id="symbols">
                     <label for="symbols">Include Symbol</label>
 

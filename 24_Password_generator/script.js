@@ -23,6 +23,9 @@ setIndicator("#ccc");
 function handleSlider() {
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+    inputSlider.style.backgroundSize =((passwordLength-min)*100/(max-min) )+"% 100%";
 
 }
 
@@ -77,7 +80,7 @@ function calcStrength() {
         (hasLower || hasUpper) && (hasNum || hasSym) && passwordLength >= 6) {
         setIndicator("#ff0");
     } else {
-        setIndicator("#0f00");
+        setIndicator("#f00");
     }
 
 }
