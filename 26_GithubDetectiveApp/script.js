@@ -45,7 +45,7 @@ async function getUser(username){
         mainContainer.style.opacity = 1;
 
     }catch(err){
-        alert("Please Enter Valid User Name..");
+        alert("Please Enter Valid User Name OR Request Exceed");
         mainContainer.style.opacity = 0;
 
 
