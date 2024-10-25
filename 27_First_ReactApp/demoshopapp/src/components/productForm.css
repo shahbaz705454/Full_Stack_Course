@@ -1,0 +1,57 @@
+.form{
+    background-color: bisque;
+    padding: 20px;
+    margin-left: 40px;
+    border-radius: 20px;
+}
+.new-Product_title label{
+
+    padding: 5px;
+    font-weight: bold;
+}
+.new-Product_title input{
+    background-color: rgb(97, 108, 255);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px;
+    color: white;
+}
+
+.new-Product_date{
+    margin-top: 10px;
+}
+
+.new-Product_date label{
+    font-weight: bold;
+    padding: 5px;
+
+}
+
+.new-Product_date input{
+    background-color: aquamarine;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px;
+}
+
+
+.new-Product_button{
+    margin-top: 10px;
+    margin-left: 60px;
+
+}
+.new-Product_button button{
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.new-Product_button button:hover{
+    scale: 1.1;
+    transition: all 0.1s ease-in-out;
+}
+
+

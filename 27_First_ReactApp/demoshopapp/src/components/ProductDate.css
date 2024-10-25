@@ -1,0 +1,10 @@
+.product-Date{
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+}
+.product-date_day{
+    font-weight: 800;
+    font-size: 20px;
+}

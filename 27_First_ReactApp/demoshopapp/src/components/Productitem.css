@@ -1,5 +1,27 @@
-.name{
-    text-align: center;
-    background-color: rgb(159, 133, 184);
-    
+.product-item{
+    background-color: aqua;
+    display: flex;
+    margin: 10px;
+    padding: 20px 120px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.product-item_description{
+    color: red;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 1px; */
+    /* margin-left: 10px; */
+}
+.btn{
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: azure;
+    outline: none;
+    border: 1px solid rebeccapurple;
+    box-shadow: 2px 2px 4px;
+
 }

@@ -1,8 +1,10 @@
 import "./cards.css";
 function Cards(props){
-    return <div className="cards">
+    const classes ='card ' + props.className;
+    return <div className={classes}>
 
-        {props.children};
+
+        {props.children}
     </div>
 }
 

@@ -1,6 +1,17 @@
-.App{
-text-align: center;
-font-size: 60px;
-background-color: aquamarine;
-height: 100vh;
+.app{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+
+
 }
+
