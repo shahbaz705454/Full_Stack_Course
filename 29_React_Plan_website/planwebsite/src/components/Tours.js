@@ -8,7 +8,7 @@ function Tours({ tours,removeTour}) {
             <div className="cards">
                 {
                     tours.map((tour) => {
-                        return <Cards {...tour} removeTour={removeTour}></Cards>
+                        return <Cards key={tour.id} {...tour} removeTour={removeTour}></Cards>
                     })
                 }
 
