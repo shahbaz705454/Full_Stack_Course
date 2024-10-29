@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.basic{
+    border: 1px solid rgb(81, 149, 212);
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+}
+.main input:checked{
+    border: 2px solid black;
+}
+.main label{
+    font: bold;
+    font-weight: 600;
+
+}
+
+.main select {
+    border: 1px solid rgb(81, 149, 212);
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+
+}
+
+.main p{
+
+    font:bold;
+    font-weight: 600;
+}
+
+.checkbox{
+    /* display: flex;
+    flex-direction: row; */
+    height: 20px;
+    align-items: start;
+    background-color: aquamarine;
+
+
+}
+
+.check input{
+    height: 50px;
+}
