@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Navigate} from 'react-router-dom';
 import logo from "../assets/Logo.svg"
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -27,12 +27,7 @@ const Navbar = (props) => {
        <div className='flex items-center gap-x-4'>
         { !isloggedIn &&
             <Link to="/login">
-                <button onClick={()=>{
-                    setIsLoggedIn(true);
-                    toast.success("Logged In");
-                    
-
-                }}
+                <button 
                 className='bg-richblack-800 text-richblack-100 py-[8px] px-[12px]
                 rounded-[8px] border border-richblack-700'
                 >Log In</button>
@@ -50,10 +45,11 @@ const Navbar = (props) => {
         }
 
         {  isloggedIn && 
-            <Link to="/logout">
+            <Link to="/">
                 <button onClick={()=>{
                     setIsLoggedIn(false);
                     toast.success("Logged Out"); 
+                    
 
                 }}
                  className='bg-richblack-800 text-richblack-100 py-[8px] px-[12px]
