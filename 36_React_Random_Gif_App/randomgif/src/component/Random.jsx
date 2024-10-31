@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Spinner from './Spinner';
+import useGif from '../hooks/useGif';
 
 // import { useEffect } from 'react';
 
@@ -13,32 +14,35 @@ const Random = () => {
 
   }
 
-  const [gif,setGif] = useState('cute cats');
-  const [loading,setLoading] = useState(false);
+  // const [gif,setGif] = useState('cute cats');
+  // const [loading,setLoading] = useState(false);
 
 
 
-  async function fetchData() {
-    const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`
+  // async function fetchData() {
+  //   const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`
 
     
 
-    try {
-      setLoading(true)
-      const response = await axios.get(url);
-      setGif(response.data.data.images.original.url); 
-      // console.log(response);
-      setLoading(false);
+  //   try {
+  //     setLoading(true)
+  //     const response = await axios.get(url);
+  //     setGif(response.data.data.images.original.url); 
+  //     // console.log(response);
+  //     setLoading(false);
     
-    } catch (error) {
-      console.error("Error fetching GIF:", error);
-    }
+  //   } catch (error) {
+  //     console.error("Error fetching GIF:", error);
+  //   }
     
-  } 
+  // } 
 
-  useEffect (()=>{
-    fetchData();
-  },[]);
+  // useEffect (()=>{
+  //   fetchData();
+  // },[]);
+
+
+const {gif,loading,fetchData} = useGif();
    
 
 
