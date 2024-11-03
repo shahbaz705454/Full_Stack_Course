@@ -1,6 +1,12 @@
 const express = require('express');
 const app = express();
 
+const bodyParser = require('body-parser');
+
+
+// SPECIALLY parse Json Data & add it to the request body object 
+app.use(bodyParser.json()); 
+
 
 // Server instantiate
 app.listen(3000, ()=>{

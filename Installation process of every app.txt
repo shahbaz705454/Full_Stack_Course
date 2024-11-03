@@ -1,0 +1,28 @@
+Tailwind CSS PROCESS:
+1.npm install -D tailwindcss
+2.npx tailwindcss init
+3."./src/**/*.{html,js}"  ->put this command in tailwind.config.js
+4. @tailwind base;        
+   @tailwind components;
+   @tailwind utilities;       ->put these three tag  into input.css folder means main css file
+
+
+
+REACT INSTALLATION PROCESS:
+1.create a folder 
+2.npx create-react-app myshopapp  ->(you can choose any name on the place of myshopapp
+3.cd myshopapp
+4.npm run start   -> for running the react app
+
+
+
+
+
+EXPRESS JS PREOCESS:
+
+1.Create folder
+2.npm init -y
+3.npm I express
+4.npm (your file name(server.js)) For running the server
+
+MONGO DB PROCESS:
