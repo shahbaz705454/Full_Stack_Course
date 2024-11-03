@@ -25,4 +25,17 @@ EXPRESS JS PREOCESS:
 3.npm I express
 4.npm (your file name(server.js)) For running the server
 
-MONGO DB PROCESS:
+
+
+MONGOOSE PROCESS:
+1.npm i mongoose
+2.const mongoose = require('mongoose');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/myDatabase',{
+    useNewurlParser:true,
+    useUnifiedTopology:true
+})
+
+.then(()=>{console.log("connection Succesfull")}) 
+.catch((error)=>{console.log("Connection failed")})                         ------>Put This code into server.js file
+                                                    
