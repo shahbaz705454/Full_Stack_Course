@@ -87,9 +87,48 @@ console.log(filterd)
 // reduced perform some opertation to reduce array to sing evalue 
 
 let reduced= arr.reduce((result,currValue)=>{
-    return result+currValue;
+    // return result+currValue;
+    // to find largest number 
+    return result>currValue?result:currValue;
 
 })
 
 console.log(reduced)
+
+
+//  question -- marks of student filter out more then 90 marks 
+
+let marks = [70,90,91,67,78,99,93,56,95,90,24,91,94,94,65,86,96,45,86,96];
+
+let result = marks.filter((value)=>{
+    return value>90;
+})
+
+console.log(result)
+
+
+
+// quest-2-- take n input from user create array from  1 to n 
+// use reduce to calcultae sum of all 
+
+let n = parseInt(prompt("Enter number you want array size"));
+
+let arrN=[];
+for (let i = 1; i <= n; i++) {
+    arrN.push(i)
+    
+}
+
+let sumN= arrN.reduce((res,curVal)=>{
+    return res+curVal;
+})
+
+let prodN=arrN.reduce((res,val)=>{
+    return res*val;
+})
+
+console.log(sumN)
+console.log(prodN)
+
+
 

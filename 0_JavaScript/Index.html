@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>JavaScript</title>
 </head>
 <body>
 
-    <h1>hello this is java script code </h1>
-    
+    <div  class="wrapper">
 
-    <script src="5_Functions.js"></script>
+        <nav class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>Contact Us </li>
+                <li>Hire </li>
+                <li>About </li>
+            </ul>
+        </nav>
+
+        <div id="change">
+            <h2 id="heading">This is original</h2>
+            <button onmouseover="changeHandler()" id="btn">Click to Change</button>
+        </div>
+
+        <div id="box">
+            <button class="btnC">+</button>
+            <div id="countBox">0</div>
+            <button class="btnC">-</button>
+        </div>
+
+
+
+
+    </div>
+
+    <script src="6_DOM_manipulation.js"></script>
 </body>
 </html>
