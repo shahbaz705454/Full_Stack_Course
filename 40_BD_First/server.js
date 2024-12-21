@@ -16,7 +16,7 @@ app.listen(3000, ()=>{
 // routes
 
 app.get("/",(request,response)=>{
-    response.send("hello ji this is my first server");
+    response.send("hello ji this is my first last server");
 })
 
 app.post("/api/cars" ,(request,response)=>{
@@ -27,10 +27,10 @@ app.post("/api/cars" ,(request,response)=>{
 })
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/myDatabase',{
-    useNewurlParser:true,
-    useUnifiedTopology:true
-})
-
-.then(()=>{console.log("connection Succesfull")})
-.catch((error)=>{console.log("Connection failed")})
+mongoose.connect('mongodb://127.0.0.1:27017/myDatabase')
+  .then(() => {
+    console.log("Connection successful");
+  })
+  .catch((error) => {
+    console.error("Connection error: ", error.message);
+  });
