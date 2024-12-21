@@ -11,7 +11,7 @@ const todoSchema = new mongoose.Schema(
         description:{
             type:String,
             required:true,
-            maxLength:50,
+            maxLength:100,
              
         },
         createdAt:{
