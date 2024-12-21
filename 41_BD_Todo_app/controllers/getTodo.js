@@ -37,13 +37,13 @@ exports.getTodoById = async (req, resp) => {
         // data for give on not founde 
         if(!todo){
             return resp.status(404).json({
-                sucess:false,
+                success:false,
                 message:"No Data is found"
             })
         }
 
-        req.status(200).json({
-            sucess:true,
+        resp.status(200).json({
+            success:true,
             data:todo,
             message:`Todo ${id} data succesfull fetched`
         })
