@@ -9,25 +9,25 @@ const PORT = process.env.PORT || 7000;
 
 
 // using middle ware to parse json request body
-// app.use(express.json());
+app.use(express.json());
 
 
 // import routes 
-// const route = require("./routes/route");
+const blog = require("./routes/blog");
 
 // mount the blog api route with version
-// app.use("/api/v1",route);
+app.use("/api/v1",blog);
 
 // start the server
 
-app.listen(PORT,()=>{
-    console.log(`Server Started at port ${PORT}`);
-})
 
 // connect data base
 const dbConnect = require("./config/database");
 dbConnect();
 
+app.listen(PORT,()=>{
+    console.log(`Server Started at port ${PORT}`);
+})
 // default Route 
 app.get("/",(req,resp)=>{
     resp.send(`<h1>This is Home Page Of Blog Website </h1>`);
