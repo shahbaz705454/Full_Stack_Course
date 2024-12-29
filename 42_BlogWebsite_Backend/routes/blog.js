@@ -11,7 +11,7 @@ const {likepost, unlikePost} = require("../controllers/LikeController");
 
 
 
-//  create mapping 
+//  create mapping ok
 
 router.get("/Posts",posts);
 router.post("/posts/create", createPost);
