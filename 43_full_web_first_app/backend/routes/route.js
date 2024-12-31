@@ -8,6 +8,7 @@ const {setuser} =require("../controllers/setUser");
 router.get("/getUsers",getUsers);
 router.post("/setUser",setuser);
 
+
 module.exports =router;
 
 
