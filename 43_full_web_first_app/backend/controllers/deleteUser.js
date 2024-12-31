@@ -15,7 +15,10 @@ exports.deleteUser =async (req,resp)=>{
     }catch(err){
 
         console.log("Error while deleting the User");
-        console.log(err);
+        resp.status(500).json({
+            success:false,
+            message:err.message
+        })
 
 
 
