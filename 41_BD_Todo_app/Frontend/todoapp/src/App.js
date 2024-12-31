@@ -41,7 +41,7 @@ function App() {
 
 
   return (
-    <div  className="overflow-hidden flex relative justify-center items-center bg-slate-900 h-fit min-h-[100vh] w-screen">
+    <div  className=" overflow-hidden flex relative justify-center items-center bg-slate-900 h-fit min-h-[100vh] w-screen">
       <div className='absolute font-bold text-[10rem] z-10 text-yellow-100 opacity-10'>TODO</div>
       <div ref={ref} className='z-20 flex-wrap  border-white w-9/12 h-full flex m-5 ml-0 mr-0 rounded-lg'>
       {todoData.map((todo, index) => (

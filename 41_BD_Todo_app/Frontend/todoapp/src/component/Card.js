@@ -22,13 +22,14 @@ const Card = ({ Data, refreshTodos,refrence }) => {
                 <h2 className="font-bold text-center text-2xl text-cyan-600  mb-1">{title}</h2>
                 <p className="text-white opacity-80 text-sm mb-5">{description}</p>
                 <div className="flex-grow"></div>
-                <button
+                <motion.button whileTap={{ scale: 0.9, rotate: 5 }}
                     onClick={deleteHandler}
                     className="self-center p-3 opacity-60 hover:opacity-100 rounded-full bg-red-600 text-white cursor-pointer hover:bg-red-700 transition-all duration-100 ease-in-out transform hover:scale-110 shadow-md"
                 >
                     <MdOutlineDelete size={24} />
-                </button>
+                </motion.button>
             </div>
+       
         </motion.div>
     );
 };
