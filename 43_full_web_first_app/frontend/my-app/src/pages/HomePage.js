@@ -28,15 +28,15 @@ const HomePage = () => {
   const deleteHandler = async (id) => {
 
     console.log(id)
-    // try {
-    //   const response = await axios.post('http://localhost:4000/api/v1/deleteUser', { id });
-    //   console.log(response.data.message); // Log the server's response
+    try {
+      const response = await axios.post('http://localhost:4000/api/v1/deleteUser', { id });
+      console.log(response.data.message); // Log the server's response
 
-    //   // Refresh the user data after deletion
-    //   getData();
-    // } catch (err) {
-    //   console.error(err.message); // Handle errors gracefully
-    // }
+      // Refresh the user data after deletion
+      getData();
+    } catch (err) {
+      console.error(err.message); // Handle errors gracefully
+    }
   };
 
   return (
