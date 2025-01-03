@@ -1,6 +1,9 @@
 const express = require("express");
 
+const cookie = require("cookie-parser");
+
 const app= express();
+
 
 require("dotenv").config();
 
@@ -8,6 +11,8 @@ const PORT = process.env.PORT || 7000;
 
 // middleware
 app.use(express.json());
+
+
 
 
 
@@ -21,6 +26,7 @@ app.listen(PORT,()=>{
 })
 
 const dbConnect = require("./config/database");
+const cookieParser = require("cookie-parser");
 dbConnect();
 
 

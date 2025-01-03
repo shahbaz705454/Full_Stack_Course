@@ -85,7 +85,7 @@ exports.login = async (req, resp) => {
                 httpOnly: true,
             };
 
-            resp.cookie("token", token, option).status(200).json({
+            resp.cookie("shahbazToken", token, option).status(200).json({
                 success: true,
                 message: "User Logged In Successfully",
                 user,
@@ -96,6 +96,7 @@ exports.login = async (req, resp) => {
             return resp.status(403).json({
                 success: false,
                 message: "Password Incorrect",
+                
             });
         }
 
@@ -107,6 +108,4 @@ exports.login = async (req, resp) => {
         });
     }
 };
-
-
 
