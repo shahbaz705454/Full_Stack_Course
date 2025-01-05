@@ -8,7 +8,10 @@ const app = express();
 
 // middleware 
 app.use(express.json());
-app.use(fileupload());
+app.use(fileupload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/", // Directory for temporary file storage
+}));
 
 
 const PORT = process.env.PORT || 7000;
