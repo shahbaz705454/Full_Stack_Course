@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const fileSchema = new mongoose.Schema({
     name: {
@@ -19,7 +21,8 @@ const fileSchema = new mongoose.Schema({
 fileSchema.post("save", async function (doc) {
     try {
         //  transporter
-        let transporter =nodemailer.transporter({
+        // console.log(doc)
+        let transporter =nodemailer.createTransport({
             host:process.env.MAIL_HOST,
             auth:{
                 user:process.env.MAIL_USER,
@@ -33,9 +36,10 @@ fileSchema.post("save", async function (doc) {
             from:"form fileUpload cloudinary",
             to:doc.email,
             subject:"New File Uploaded On cloudinary",
-            html:`<h2>hello jee<h2/> <p>File Uploaded</p>`
+            html:`<h2>hello jee<h2/> <p>File Uploaded on Cloudinary</p>
+            view Here: <a href="${doc.imageUrl}">${doc.name}</a> `
         })
-        console.log(info)
+        // console.log(info);
 
 
     } catch (err) {

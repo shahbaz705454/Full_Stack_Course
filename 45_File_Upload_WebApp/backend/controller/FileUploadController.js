@@ -193,3 +193,29 @@ exports.imgReducerUpload = async (req, resp) => {
         });
     }
 }
+
+
+exports.getAll =async (req,resp)=>{
+
+    
+    try{
+        
+        const data = await File.find({});
+        resp.status(200).json({
+            success:true,
+            data:data,
+
+        })
+
+    }catch(err){
+
+        resp.status(404).json({
+            success:false,
+            message:err.message
+        })
+
+
+    }
+
+
+}
