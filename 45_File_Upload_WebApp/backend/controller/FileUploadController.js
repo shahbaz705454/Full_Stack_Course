@@ -50,8 +50,8 @@ const uploadFileToCloudinary = async (file, folder,quality) => {
 
 exports.imageUpload = async (req, resp) => {
     try {
-        const { name, tags, email } = req.body;
-        console.log(name, tags, email);
+        // const { name, tags, email } = req.body;
+        // console.log(name, tags, email);
 
         const file = req.files.imageFile; // Assuming you're using a library like express-fileupload
         console.log(file);
@@ -74,9 +74,9 @@ exports.imageUpload = async (req, resp) => {
 
         // Save the entry to the database (not implemented in your code)
         const fileData = await File.create({
-            name,
-            tags,
-            email,
+            name:"shahbazimage",
+            tags:"image",
+            email:"mohdtrailmail1@gmail.com",
             imageUrl: response.secure_url,
         })
 
@@ -87,9 +87,10 @@ exports.imageUpload = async (req, resp) => {
             // cloudinaryResponse: response,
         });
     } catch (err) {
+        console.log(err)
         resp.status(400).json({
             success: false,
-            message: `File upload failed: ${err.message}`,
+            message: `File upload failed: ${err}`,
         });
     }
 };
