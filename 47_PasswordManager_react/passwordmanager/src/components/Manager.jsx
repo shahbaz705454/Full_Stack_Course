@@ -35,10 +35,11 @@ const Manager = () => {
             alert("Form is empty. Please fill in all fields.");
             return;
         }
-        setPasswordArray([...PasswordArray, {...form , id: uuidv4()}]);
-        localStorage.setItem("passwords", JSON.stringify([...PasswordArray, {...form , id: uuidv4()}]))
+        setPasswordArray([...PasswordArray, { ...form, id: uuidv4() }]);
+        localStorage.setItem("passwords", JSON.stringify([...PasswordArray, { ...form, id: uuidv4() }]))
         console.log([...PasswordArray, form]);
         setForm({ site: "", username: "", password: "" });
+        toast.success("Password Saved Successfully");
 
     }
     const copyText = (text) => {
@@ -47,23 +48,30 @@ const Manager = () => {
 
     }
 
-    const deleteItem =(id)=>{
-        setPasswordArray(PasswordArray.filter(item=>item.id!==id));
-        localStorage.setItem("passwords", JSON.stringify(PasswordArray.filter(item=>item.id!==id)))
+    const deleteItem = (id) => {
+        setPasswordArray(PasswordArray.filter(item => item.id !== id));
+        localStorage.setItem("passwords", JSON.stringify(PasswordArray.filter(item => item.id !== id)))
         toast.error("Item deleted Successfully");
+
+    }
+    const editItem = (id) => {
+        setForm(PasswordArray.filter(i => i.id === id)[0]);
+        setPasswordArray(PasswordArray.filter(item => item.id !== id));
+
+
 
     }
 
 
 
     return (
-        <div className='h-[79vh]'>
+        <div className='h-[88vh] overflow-auto'>
             <Toaster></Toaster>
-            <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+            <div class="absolute inset-0 -z-10 lg:h-full lg:w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
             </div>
 
 
-            <div className='text-white h-[200px] mx-auto mt-20 w-[800px] flex flex-col  gap-4'>
+            <div className='text-white lg:h-[200px] mx-auto mt-20 lg:w-[800px] flex flex-col  gap-4'>
                 <h1 className='logo font-bold text-3xl text-center'>
                     <span className='text-yellow-400'>&lt;</span>
                     Password
@@ -71,8 +79,8 @@ const Manager = () => {
                 </h1>
                 <p className='text-yellow-500 text-center text-lg font-semibold' >Your Own Password Manager</p>
 
-                <input placeholder='Enter Website URL' onChange={handleChange} type='text' name='site' value={form.site} className='bg-white border-3 px-2 text-black w-full border-yellow-500 rounded-full'></input>
-                <div className='flex gap-4 w-full' >
+                <input placeholder='Enter Website URL' onChange={handleChange} type='text' name='site' value={form.site} className='bg-white border-3 px-2 text-black w-3/4 mx-auto border-yellow-500 rounded-full'></input>
+                <div className='flex gap-4 justify-center mx-auto flex-col lg:flex-row w-3/4' >
                     <input placeholder='Enter UserName' onChange={handleChange} value={form.username} name='username' type='text' className='bg-white  border-2 w-full px-2 text-black border-green-500  rounded-full'></input>
 
                     <div className='relative w-full'>
@@ -91,13 +99,7 @@ const Manager = () => {
 
 
                 <button onClick={onSubmit} className='bg-yellow-600 hover:scale-105 gap-2 font-semibold w-fit mx-auto rounded-md px-2 py-1 cursor-pointer items-center justify-center flex'>
-                    {/* <lord-icon
-                        src="https://cdn.lordicon.com/sbnjyzil.json"
-                        trigger="hover"
-                        colors="primary:#ffffff,secondary:#000000"
-
-                        style={{ width: '60px', height: '40px' }}>
-                    </lord-icon>  */}
+                
                     <IoMdAdd />
 
                     Add Password</button>
@@ -106,8 +108,8 @@ const Manager = () => {
             <h2 className='text-white mt-20 text-center text-2xl font-bold'>YOUR PASSWORDS</h2>
 
 
-            <table className='mt-2 mx-auto w-[1000px] rounded-md overflow-hidden '>
-                <thead className='text-xl text-gray-700 font-bold bg-gradient-to-r from-yellow-500 via-yellow-500 to-yellow-600  '>
+            <table className='mt-2 mx-auto items-center w-[95%]  lg:w-[1000px]  rounded-md overflow-hidden '>
+                <thead className='lg:text-xl gap-3  text-gray-700 font-bold bg-gradient-to-r from-yellow-500 via-yellow-500 to-yellow-600  '>
                     <tr >
                         <th>Website Name</th>
                         <th>UserName</th>
@@ -121,7 +123,7 @@ const Manager = () => {
                         PasswordArray.map((item, index) => {
                             return (
                                 <tr key={index} className='border-b-1 border-gray-700'>
-                                    <td className='text-start px-2 py-1 flex items-center gap-3'><a href={item.site} target='_blank'>{item.site}</a>
+                                    <td className='text-start px-2 pt-2 flex items-center gap-3'><a href={item.site} target='_blank'>{item.site}</a>
                                         <div onClick={() => { copyText(item.site) }} className=' cursor-pointer font-bold'><IoCopyOutline /></div></td>
                                     <td >
                                         <div className='flex items-center gap-3 justify-center '>
@@ -137,18 +139,18 @@ const Manager = () => {
                                     </div></td>
                                     <td >
                                         <div className='cursor-pointer flex items-center gap-4 justify-center '>
-                                            <span>
+                                            <span onClick={() => { editItem(item.id) }}>
                                                 <lord-icon
                                                     src="https://cdn.lordicon.com/exymduqj.json"
                                                     trigger="hover"
                                                     style={{ "width": "25px", "height": "25px" }}>
                                                 </lord-icon>
                                             </span>
-                                            <span onClick={()=>{deleteItem(item.id)}} className='py-1'>
+                                            <span onClick={() => { deleteItem(item.id) }} className='py-1'>
                                                 <lord-icon
                                                     src="https://cdn.lordicon.com/hwjcdycb.json"
                                                     trigger="hover"
-                                                    style={{"width":"30px","height":"30px"}}>
+                                                    style={{ "width": "30px", "height": "30px" }}>
                                                 </lord-icon>
                                             </span>
                                         </div>
