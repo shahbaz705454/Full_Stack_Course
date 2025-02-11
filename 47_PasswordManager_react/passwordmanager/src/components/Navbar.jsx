@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 const Navbar = () => {
   return (
     <nav className=' bg-transparent flex justify-between px-4 lg:px-14 mt-2 h-8 lg:h-12 items-center gap-4 text-white'>
-      <div className='logo font-bold lg:text-3xl py-2'>
+      <div className='logo font-bold md:text-2xl lg:text-3xl py-2'>
         <span className='text-green-400'>&lt;</span>
         Pass
         <span className='text-green-400'>Manager/&gt;</span>

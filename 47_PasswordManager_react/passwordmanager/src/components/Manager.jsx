@@ -108,7 +108,7 @@ const Manager = () => {
             <h2 className='text-white mt-20 text-center text-2xl font-bold'>YOUR PASSWORDS</h2>
 
 
-            <table className='mt-2 mx-auto items-center w-[95%]  lg:w-[1000px]  rounded-md overflow-hidden '>
+            <table className='mb-10 mt-2 mx-auto  items-center w-[95%]  lg:w-[1000px]  rounded-md overflow-hidden '>
                 <thead className='lg:text-xl gap-3  text-gray-700 font-bold bg-gradient-to-r from-yellow-500 via-yellow-500 to-yellow-600  '>
                     <tr >
                         <th>Website Name</th>
@@ -117,7 +117,7 @@ const Manager = () => {
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody className='  bg-gradient-to-r from-green-500 via-green-500
+                <tbody className='   bg-gradient-to-r from-green-500 via-green-500
                to-gray-300 text-center'>
                     {PasswordArray.length !== 0 ?
                         PasswordArray.map((item, index) => {
